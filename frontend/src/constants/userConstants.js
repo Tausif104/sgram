@@ -1,0 +1,15 @@
+// login constants
+export const USER_LOGIN_REQUEST = 'USER_LOGIN_REQUEST'
+export const USER_LOGIN_SUCCESS = 'USER_LOGIN_SUCCESS'
+export const USER_LOGIN_FAIL = 'USER_LOGIN_FAIL'
+export const USER_LOGUT = 'USER_LOGUT'
+
+// register constants
+export const USER_REGISTER_REQUEST = 'USER_REGISTER_REQUEST'
+export const USER_REGISTER_SUCCESS = 'USER_REGISTER_SUCCESS'
+export const USER_REGISTER_FAIL = 'USER_REGISTER_FAIL'
+
+// get all users constants
+export const USERS_GET_REQUEST = 'USERS_GET_REQUEST'
+export const USERS_GET_SUCCESS = 'USERS_GET_SUCCESS'
+export const USERS_GET_FAIL = 'USERS_GET_FAIL'

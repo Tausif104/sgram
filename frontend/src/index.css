@@ -1,0 +1,116 @@
+img {
+    max-width: 100%;
+}
+.post-card .card-header {
+    display: flex;
+    align-items: center;
+}
+
+.post-card .card-header img {
+    max-width: 40px;
+    border-radius: 50%;
+    height: 40px;
+    object-fit: cover;
+}
+
+.post-card .card-header h4 {
+    margin: 0;
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+span.post-likes {
+    display: inline-block;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+span.post-likes {
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.post-card .card-title.h5 {
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+main {
+    min-height: 80vh;
+    margin: 30px;
+}
+
+.post-screen-meta img.rounded-circle {
+    max-width: 50px;
+}
+
+.post-screen-meta h4 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.post-screen-meta img.rounded-circle {
+    max-width: 50px;
+}
+
+.post-screen-meta h4 {
+    margin: 0;
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+.post-screen-content h2 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.spinner-wrapper {
+    justify-content: center;
+    align-items: center;
+    display: block;
+}
+
+.spinner-wrapper img {
+    max-width: 30px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.form-wrapper {
+    border: 1px solid #ddd;
+}
+
+.form-wrapper {
+    padding: 33px 30px;
+    border-radius: 5px;
+    margin-top: 30%;
+}
+
+.post-square img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.post-square {
+    margin-bottom: 30px;
+}
+
+.spinner-border {
+    width: 1rem !important;
+    height: 1rem !important;
+    border: 0.15em solid #fff !important;
+    border-right-color: transparent !important;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+h1.heading {
+    font-size: 25px;
+    margin-bottom: 30px;
+}

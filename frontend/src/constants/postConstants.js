@@ -1,0 +1,14 @@
+// list posts constants
+export const POST_LIST_REQUEST = 'POST_LIST_REQUEST'
+export const POST_LIST_SUCCESS = 'POST_LIST_SUCCESS'
+export const POST_LIST_FAIL = 'POST_LIST_FAIL'
+
+// post details constants
+export const POST_DETAILS_REQUEST = 'PORT_DETAILS_REQUEST'
+export const POST_DETAILS_SUCCESS = 'PORT_DETAILS_SUCCESS'
+export const POST_DETAILS_FAIL = 'PORT_DETAILS_FAIL'
+
+// posts by user
+export const POSTED_USER_REQUEST = 'POSTED_USER_REQUEST'
+export const POSTED_USER_SUCCESS = 'POSTED_USER_SUCCESS'
+export const POSTED_USER_FAIL = 'POSTED_USER_FAIL'
