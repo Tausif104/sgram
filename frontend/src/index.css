@@ -114,3 +114,16 @@ h1.heading {
     font-size: 25px;
     margin-bottom: 30px;
 }
+
+.post-created-notice {
+    margin-top: 20px;
+}
+
+.post-created-notice a {
+    color: green;
+    text-decoration: underline;
+    text-underline-position: under;
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 13px;
+}

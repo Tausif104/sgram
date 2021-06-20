@@ -6,6 +6,7 @@ import SignupScreen from './screens/SignupScreen'
 import PostScreen from './screens/PostScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import UsersScreen from './screens/UsersScreen'
+import CreatePostScreen from './screens/CreatePostScreen'
 import Header from './components/Header'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                     <Route path='/post/:id' component={PostScreen} />
                     <Route path='/users/profile' component={ProfileScreen} />
                     <Route path='/users' component={UsersScreen} exact />
+                    <Route path='/create' component={CreatePostScreen} />
                 </Container>
             </main>
         </Router>

@@ -22,7 +22,7 @@ const ProfileScreen = ({ history, match }) => {
         if (userInfo) {
             dispatch(userPosts(userInfo._id))
         }
-    }, [history, userInfo, dispatch, match, userPosts])
+    }, [history, userInfo, dispatch, match])
 
     return (
         <div>

@@ -1,8 +1,8 @@
 // importing packages
-import { useEffect } from 'react'
+
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { Container, Navbar, Nav } from 'react-bootstrap'
+import { Container, Navbar, Nav, Button } from 'react-bootstrap'
 
 // importing files
 import { logout } from '../actions/userActions'
@@ -29,6 +29,9 @@ const Header = () => {
                     <Navbar.Collapse id='responsive-navbar-nav'>
                         {userInfo ? (
                             <Nav className='ml-auto'>
+                                <Link className='nav-link' to='/create'>
+                                    Create
+                                </Link>
                                 <Link className='nav-link' to='/users/profile'>
                                     {userInfo.name}
                                 </Link>
@@ -36,9 +39,9 @@ const Header = () => {
                                     All Users
                                 </Link>
                                 <a
+                                    href=''
                                     onClick={logoutHandler}
                                     className='nav-link'
-                                    href=''
                                 >
                                     Logout
                                 </a>

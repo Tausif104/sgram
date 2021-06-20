@@ -8,6 +8,7 @@ import {
     postListReducer,
     postDetailsReducer,
     postedByUserReducer,
+    postCreateReducer,
 } from './reducers/postReducers'
 import {
     userLoginReducer,
@@ -23,6 +24,7 @@ const reducer = combineReducers({
     userLogin: userLoginReducer,
     userRegister: userRegisterReducer,
     getUsers: getUsersReducer,
+    postCreate: postCreateReducer,
 })
 
 // save userinfo in localstorage

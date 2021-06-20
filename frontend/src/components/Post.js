@@ -9,7 +9,11 @@ const Post = ({ post }) => {
             >
                 <Card.Header>
                     <Card.Img variant='top' src={post.userAvatar} />
-                    <h4>{post.name}</h4>
+                    <h4>
+                        <Link to={`/users/${post.user && post.user._id}`}>
+                            {post.user && post.user.name}
+                        </Link>
+                    </h4>
                 </Card.Header>
                 <Link to={`/post/${post._id}`}>
                     <Card.Img variant='top' src={post.image} />

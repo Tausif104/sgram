@@ -12,7 +12,48 @@ import {
     POSTED_USER_REQUEST,
     POSTED_USER_SUCCESS,
     POSTED_USER_FAIL,
+    POST_CREATE_REQUEST,
+    POST_CREATE_SUCCESS,
+    POST_CREATE_FAIL,
 } from '../constants/postConstants'
+
+// create post action
+export const createPost = (title, image) => async (dispatch, getState) => {
+    try {
+        dispatch({
+            type: POST_CREATE_REQUEST,
+        })
+
+        const {
+            userLogin: { userInfo },
+        } = getState()
+
+        const config = {
+            headers: {
+                Authorization: `Bearer ${userInfo.token}`,
+            },
+        }
+
+        const { data } = await axios.post(
+            '/api/posts',
+            { title, image },
+            config
+        )
+
+        dispatch({
+            type: POST_CREATE_SUCCESS,
+            payload: data,
+        })
+    } catch (error) {
+        dispatch({
+            type: POST_CREATE_FAIL,
+            payload:
+                error.response && error.response.data.message
+                    ? error.response.data.message
+                    : error.message,
+        })
+    }
+}
 
 // get all posts action
 export const listPosts = () => async (dispatch) => {

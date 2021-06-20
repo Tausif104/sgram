@@ -38,11 +38,11 @@ const PostScreen = ({ match, history }) => {
                         <div className='post-screen-content'>
                             <div className='post-screen-meta d-flex align-items-center'>
                                 <Image roundedCircle src={post.userAvatar} />
-                                <h4>{post.name}</h4>
+                                <h4>{post.user && post.user.name}</h4>
                             </div>
                             <h2>{post.title}</h2>
                             <p className='likes'>
-                                {post.likes}{' '}
+                                {post.likes}
                                 {post.likes === 1 ? 'Like' : 'Likes'}
                             </p>
                         </div>
