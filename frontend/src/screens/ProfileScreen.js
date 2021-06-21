@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { userPosts } from '../actions/postActions'
-import { Row, Col, Image, Alert } from 'react-bootstrap'
+import { Row, Col, Image, Alert, Button } from 'react-bootstrap'
 import Spinner from '../components/Spinner'
 
 const ProfileScreen = ({ history, match }) => {
@@ -20,21 +20,28 @@ const ProfileScreen = ({ history, match }) => {
         }
 
         if (userInfo) {
-            dispatch(userPosts(userInfo._id))
+            dispatch(userPosts(match.params.user))
         }
     }, [history, userInfo, dispatch, match])
 
     return (
         <div>
-            <h1>{userInfo && userInfo.name.split(' ')[0]}</h1>
-            <p>{userInfo && userInfo.email}</p>
             <Row>
-                {loading && <Spinner />}
-                {error && <Alert variant='warning'></Alert>}
+                <div className='col-lg-12'>
+                    {loading && <Spinner />}
+                    {error && <Alert variant='warning'></Alert>}
+                    {postsUser.map(
+                        (p, i) =>
+                            i === 0 && (
+                                <h1 key={p._id} className='heading'>
+                                    {p.user.name}
+                                </h1>
+                            )
+                    )}
+                </div>
+
                 {postsUser.length === 0 && (
-                    <Alert variant='warning'>
-                        No Posts by {userInfo && userInfo.name.split(' ')[0]}
-                    </Alert>
+                    <Alert variant='danger'>User have no posts</Alert>
                 )}
 
                 {postsUser.length !== 0 &&

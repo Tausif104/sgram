@@ -94,11 +94,11 @@ const getUserProfile = asyncHandler(async (req, res) => {
 })
 
 // @desc    Get posts by User
-// @route   GET /api/users/profile/posted/:user
+// @route   GET /api/users/:user
 // @access  Private
 const getPostsByUser = asyncHandler(async (req, res) => {
     const user = req.params.user
-    const postsById = await Post.find({ user })
+    const postsById = await Post.find({ user }).populate('user')
 
     if (postsById) {
         res.json(postsById)

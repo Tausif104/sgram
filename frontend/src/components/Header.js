@@ -2,7 +2,7 @@
 
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { Container, Navbar, Nav, Button } from 'react-bootstrap'
+import { Container, Navbar, Nav } from 'react-bootstrap'
 
 // importing files
 import { logout } from '../actions/userActions'
@@ -23,7 +23,7 @@ const Header = () => {
             <Navbar collapseOnSelect expand='lg' bg='light' variant='light'>
                 <Container>
                     <Link className='navbar-brand' to='/'>
-                        Sgram
+                        Gram
                     </Link>
                     <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                     <Navbar.Collapse id='responsive-navbar-nav'>
@@ -32,7 +32,10 @@ const Header = () => {
                                 <Link className='nav-link' to='/create'>
                                     Create
                                 </Link>
-                                <Link className='nav-link' to='/users/profile'>
+                                <Link
+                                    className='nav-link'
+                                    to={`/users/${userInfo._id}`}
+                                >
                                     {userInfo.name}
                                 </Link>
                                 <Link className='nav-link' to='/users'>

@@ -8,7 +8,6 @@ const Post = ({ post }) => {
                 style={{ width: '100%', marginBottom: '40px' }}
             >
                 <Card.Header>
-                    <Card.Img variant='top' src={post.userAvatar} />
                     <h4>
                         <Link to={`/users/${post.user && post.user._id}`}>
                             {post.user && post.user.name}

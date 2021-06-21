@@ -39,4 +39,18 @@ const createPost = asyncHandler(async (req, res) => {
     res.status(201).json(createdPost)
 })
 
-export { getPost, getPostById, createPost }
+// @desc    Delete Post
+// @route   DELETE /api/posts/:id
+// @access  Private
+const deletePost = asyncHandler(async (req, res) => {
+    const post = await Post.findById(req.params.id)
+    if (req.user._id.toString() === post.user._id.toString()) {
+        await post.remove()
+        res.json({ msg: 'Post Removed' })
+    } else {
+        res.status(401)
+        throw new Error('User Unauthorized')
+    }
+})
+
+export { getPost, getPostById, createPost, deletePost }

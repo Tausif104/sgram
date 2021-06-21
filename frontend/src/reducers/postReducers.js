@@ -12,6 +12,9 @@ import {
     POST_CREATE_REQUEST,
     POST_CREATE_SUCCESS,
     POST_CREATE_FAIL,
+    POST_DELETE_REQUEST,
+    POST_DELETE_SUCCESS,
+    POST_DELETE_FAIL,
 } from '../constants/postConstants'
 
 // post create reducer
@@ -21,6 +24,20 @@ export const postCreateReducer = (state = {}, action) => {
             return { loading: true }
         case POST_CREATE_SUCCESS:
             return { loading: false, post: action.payload }
+        case POST_CREATE_FAIL:
+            return { loading: false, error: action.payload }
+        default:
+            return state
+    }
+}
+
+// post delete reducer
+export const postDeleteReducer = (state = {}, action) => {
+    switch (action.type) {
+        case POST_DELETE_REQUEST:
+            return { loading: true }
+        case POST_DELETE_SUCCESS:
+            return { loading: false, success: true }
         case POST_CREATE_FAIL:
             return { loading: false, error: action.payload }
         default:

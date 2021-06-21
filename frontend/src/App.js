@@ -19,7 +19,11 @@ function App() {
                     <Route path='/login' component={LoginScreen} />
                     <Route path='/signup' component={SignupScreen} />
                     <Route path='/post/:id' component={PostScreen} />
-                    <Route path='/users/profile' component={ProfileScreen} />
+                    <Route
+                        path='/users/:user'
+                        component={ProfileScreen}
+                        exact
+                    />
                     <Route path='/users' component={UsersScreen} exact />
                     <Route path='/create' component={CreatePostScreen} />
                 </Container>

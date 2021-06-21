@@ -25,6 +25,6 @@ router.route('/login').post(authUser)
 router.route('/profile').get(protect, getUserProfile)
 
 // get profile by users
-router.route('/profile/posted/:user').get(getPostsByUser)
+router.route('/:user').get(getPostsByUser)
 
 export default router

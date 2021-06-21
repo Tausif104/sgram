@@ -16,7 +16,6 @@ img {
 .post-card .card-header h4 {
     margin: 0;
     font-size: 15px;
-    margin-left: 15px;
 }
 
 span.post-likes {
@@ -57,7 +56,6 @@ main {
 .post-screen-meta h4 {
     margin: 0;
     font-size: 15px;
-    margin-left: 15px;
 }
 
 .post-screen-content h2 {
@@ -126,4 +124,15 @@ h1.heading {
     margin-left: 10px;
     font-weight: 500;
     font-size: 13px;
+}
+
+.card-header h4 a {
+    margin: 10px 0;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.card-header h4 a {
+    color: #333;
+    font-weight: bold;
 }

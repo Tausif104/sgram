@@ -42,6 +42,7 @@ const userRegisterReducer = (state = {}, action) => {
     }
 }
 
+// get users reducer
 const getUsersReducer = (state = { userList: [] }, action) => {
     switch (action.type) {
         case USERS_GET_REQUEST:
