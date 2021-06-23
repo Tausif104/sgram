@@ -23,7 +23,7 @@ const Header = () => {
             <Navbar collapseOnSelect expand='lg' bg='light' variant='light'>
                 <Container>
                     <Link className='navbar-brand' to='/'>
-                        Gram
+                        <i className='fab fa-instagram'></i>
                     </Link>
                     <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                     <Navbar.Collapse id='responsive-navbar-nav'>

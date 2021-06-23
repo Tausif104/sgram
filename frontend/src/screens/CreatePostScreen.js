@@ -11,7 +11,7 @@ const CreatePostScreen = ({ history }) => {
     const { userInfo } = userLogin
 
     const postCreate = useSelector((state) => state.postCreate)
-    const { loading, error, post } = postCreate
+    const { loading, success, error, post } = postCreate
 
     const [title, setTitle] = useState('')
     const [image, setImage] = useState('')
@@ -54,19 +54,22 @@ const CreatePostScreen = ({ history }) => {
                                 ></Form.Control>
                             </Form.Group>
 
-                            <Button variant='primary' type='submit'>
-                                {loading ? 'Posting' : 'Post'}
+                            <Button
+                                variant={
+                                    loading
+                                        ? 'primary'
+                                        : success
+                                        ? 'success'
+                                        : 'primary'
+                                }
+                                type='submit'
+                            >
+                                {loading
+                                    ? 'Posting'
+                                    : success
+                                    ? 'Posted'
+                                    : 'Post'}
                             </Button>
-
-                            {post && (
-                                <Alert
-                                    className='post-created-notice'
-                                    variant='success'
-                                >
-                                    Post Created
-                                    <Link to={`/post/${post._id}`}>View</Link>
-                                </Alert>
-                            )}
                         </Form>
                     </div>
                 </Col>

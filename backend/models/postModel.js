@@ -15,14 +15,14 @@ const postSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        // likes: [
-        //     {
-        //         user: {
-        //             type: mongoose.Schema.Types.ObjectId,
-        //             ref: 'User',
-        //         },
-        //     },
-        // ],
+        likes: [
+            {
+                user: {
+                    type: mongoose.Schema.Types.ObjectId,
+                    ref: 'User',
+                },
+            },
+        ],
         // comment: [
         //     {
         //         user: {

@@ -25,7 +25,7 @@ function App() {
                         exact
                     />
                     <Route path='/users' component={UsersScreen} exact />
-                    <Route path='/create' component={CreatePostScreen} />
+                    <Route path='/create' component={CreatePostScreen} exact />
                 </Container>
             </main>
         </Router>

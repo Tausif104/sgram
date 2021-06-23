@@ -54,10 +54,7 @@ const PostScreen = ({ match, history }) => {
                                 <h4>{post.user && post.user.name}</h4>
                             </div>
                             <h2>{post.title}</h2>
-                            <p className='likes'>
-                                {post.likes}
-                                {post.likes === 1 ? 'Like' : 'Likes'}
-                            </p>
+                            <p className='likes'>Likes</p>
                             {errorDelete && <Alert>{errorDelete}</Alert>}
                             {post.user &&
                                 userInfo &&

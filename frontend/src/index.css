@@ -16,18 +16,17 @@ img {
 .post-card .card-header h4 {
     margin: 0;
     font-size: 15px;
+    width: 100%;
 }
 
 span.post-likes {
     display: inline-block;
     font-size: 15px;
-    margin-bottom: 10px;
 }
 
 span.post-likes {
     display: inline-block;
     font-size: 14px;
-    margin-bottom: 10px;
 }
 
 .post-card .card-title.h5 {
@@ -135,4 +134,44 @@ h1.heading {
 .card-header h4 a {
     color: #333;
     font-weight: bold;
+}
+
+span.timestamp {
+    font-size: 14px;
+    font-weight: normal;
+    color: #555;
+}
+
+span.timestamp i {
+    margin-right: 5px;
+}
+
+.username {
+    margin-left: 7px;
+}
+
+.post-likes-wrapper {
+    margin-bottom: 10px;
+}
+
+.post-likes-wrapper .like-button {
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+.post-likes-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+span.like-count {
+    margin-right: 3px;
+}
+
+span.like-button {
+    cursor: pointer;
+}
+
+i.fas.fa-heart {
+    color: #ed4956;
 }
